@@ -6,6 +6,8 @@ import { PagesHeader } from "./components";
 
 import basename from "./services/basename";
 
+import "./styles/app.css";
+
 function App() {
   const [cartItems, setCartItems] = useState({ value: [], count: 0 });
 

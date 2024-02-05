@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getProducts } from "../../services/api";
 
-import "../../styles/catalog-product-card.css";
+import "../../styles/catalog-page.css";
 
 import basename from "../../services/basename";
 
@@ -17,7 +17,7 @@ export function CatalogPage({}) {
   }, []);
 
   return (
-    <section>
+    <section className="catalog-container">
       {products.map((el) => (
         <ProductCard key={`product-id-${el.id}`} data={el} />
       ))}
@@ -29,9 +29,8 @@ function ProductCard({ data }) {
   const { id, name, colors } = data;
 
   return (
-    <article>
+    <article className="catalog-item">
       <Link to={`/product/${id}`}>
-        <h3>{name}</h3>
         <div className="img-container">
           {colors.map(
             (color, index) =>
@@ -41,6 +40,7 @@ function ProductCard({ data }) {
               null
           )}
         </div>
+        <h3>{name}</h3>
       </Link>
     </article>
   );
