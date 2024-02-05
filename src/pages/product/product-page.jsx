@@ -82,7 +82,7 @@ const ProductCard = (props) => {
 
           <SizeSelector accessSizes={selectedColor?.sizes} />
 
-          <button type="submit">Добавить</button>
+          <button type="submit">Добавить в корзину</button>
         </form>
 
         <details>
