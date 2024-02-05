@@ -1,11 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
-import App from './App'
+import App from "./App";
 
-import './styles/index.css'
+import "./styles/index.css";
 
-const rootView = document.getElementById('root')
+const rootView = document.getElementById("root");
 
 if (rootView) {
   ReactDOM.render(
@@ -13,5 +13,5 @@ if (rootView) {
       <App />
     </React.StrictMode>,
     rootView
-  )
+  );
 }
