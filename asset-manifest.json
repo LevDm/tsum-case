@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tsum-case/static/css/main.fde23010.css",
-    "main.js": "/tsum-case/static/js/main.ce163e1a.js",
+    "main.js": "/tsum-case/static/js/main.4dc70787.js",
     "index.html": "/tsum-case/index.html",
     "main.fde23010.css.map": "/tsum-case/static/css/main.fde23010.css.map",
-    "main.ce163e1a.js.map": "/tsum-case/static/js/main.ce163e1a.js.map"
+    "main.4dc70787.js.map": "/tsum-case/static/js/main.4dc70787.js.map"
   },
   "entrypoints": [
     "static/css/main.fde23010.css",
-    "static/js/main.ce163e1a.js"
+    "static/js/main.4dc70787.js"
   ]
 }
