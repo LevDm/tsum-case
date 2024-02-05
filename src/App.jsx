@@ -4,6 +4,8 @@ import { CatalogPage, ProductPage, CartPage } from "./pages";
 
 import { PagesHeader } from "./components";
 
+import basename from "./services/basename";
+
 function App() {
   const [cartItems, setCartItems] = useState({ value: [], count: 0 });
 
@@ -36,7 +38,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename={basename}>
         <PagesHeader cartItemsCount={cartItems.count} />
         <main>
           <Routes>

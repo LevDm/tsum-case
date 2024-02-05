@@ -4,6 +4,8 @@ import { getProductColor, getSize, getProduct } from "../../services/api";
 
 import "../../styles/cart-product-card.css";
 
+import basename from "../../services/basename";
+
 export function CartPage({ cartItems, cartListHandler }) {
   const renderItems = (item) => (
     <CartItem key={`item-in-cart-${item.id}`} {...item} cartListHandler={cartListHandler} />
@@ -77,7 +79,7 @@ const ItemContent = React.memo((props) => {
 
   return (
     <div className="card-content">
-      <img src={imgSrc}></img>
+      <img src={basename + imgSrc}></img>
       <div>
         <h2>{name}</h2>
 

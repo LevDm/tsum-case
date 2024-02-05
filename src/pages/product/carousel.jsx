@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 
 import "../../styles/carousel.css";
 
+import basename from "../../services/basename";
+
 export function Carousel({ images = [] }) {
   const carouselListRef = useRef(null);
 
@@ -79,7 +81,7 @@ export function Carousel({ images = [] }) {
       >
         {images.map((image, index) => (
           <li key={index}>
-            <img src={image} />
+            <img src={basename + image} />
           </li>
         ))}
       </ul>

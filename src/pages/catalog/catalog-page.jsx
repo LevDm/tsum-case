@@ -4,6 +4,8 @@ import { getProducts } from "../../services/api";
 
 import "../../styles/catalog-product-card.css";
 
+import basename from "../../services/basename";
+
 export function CatalogPage({}) {
   const [products, setProducts] = useState([]);
 
@@ -33,7 +35,9 @@ function ProductCard({ data }) {
         <div className="img-container">
           {colors.map(
             (color, index) =>
-              (index < 5 && <img key={`product-image-${index}`} src={color.images[0]}></img>) ||
+              (index < 5 && (
+                <img key={`product-image-${index}`} src={basename + color.images[0]}></img>
+              )) ||
               null
           )}
         </div>
