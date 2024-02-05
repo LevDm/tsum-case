@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.fde23010.css",
-    "main.js": "/static/js/main.a633eb5d.js",
-    "index.html": "/index.html",
-    "main.fde23010.css.map": "/static/css/main.fde23010.css.map",
-    "main.a633eb5d.js.map": "/static/js/main.a633eb5d.js.map"
+    "main.css": "/tsum-case/static/css/main.fde23010.css",
+    "main.js": "/tsum-case/static/js/main.a633eb5d.js",
+    "index.html": "/tsum-case/index.html",
+    "main.fde23010.css.map": "/tsum-case/static/css/main.fde23010.css.map",
+    "main.a633eb5d.js.map": "/tsum-case/static/js/main.a633eb5d.js.map"
   },
   "entrypoints": [
     "static/css/main.fde23010.css",
