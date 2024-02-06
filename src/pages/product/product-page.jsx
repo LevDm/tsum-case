@@ -4,6 +4,8 @@ import { getProduct, getSizes } from "../../services/api";
 
 import { Carousel } from "./carousel";
 
+import "../../styles/product-page-card.css";
+
 export function ProductPage({ cartListHandler }) {
   const { id: productId } = useParams();
 
