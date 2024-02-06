@@ -49,8 +49,8 @@ const ProductCard = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const [color, size] = e.target;
-    handleAddToCart({ sizeId: String(size.value), colorId: String(color.value) });
+    const [submitButton, colorSelector, sizeSelector] = e.target;
+    handleAddToCart({ sizeId: String(sizeSelector.value), colorId: String(colorSelector.value) });
   };
 
   return (
