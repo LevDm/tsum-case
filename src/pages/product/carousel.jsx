@@ -87,10 +87,10 @@ export function Carousel({ images = [] }) {
       </ul>
 
       <button className="button to-left" onClick={prevImage}>
-        Prev
+        {`<`}
       </button>
       <button className="button to-right" onClick={nextImage}>
-        Next
+        {`>`}
       </button>
 
       <div className="indicators">

@@ -1,9 +1,24 @@
 .carousel {
   position: relative;
-  background-color: black;
-  width: calc(0px + var(--c-width));
-  padding: 5px;
-  --c-width: 400px;
+  width: var(--c-width);
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  align-self: center;
+  justify-self: center;
+
+  --screen-w: 1300px;
+  --width-part: 0.5;
+  --c-width: calc((var(--screen-w) - (48px + 8px)) * var(--width-part));
+
+  @media (max-width: 1300px) {
+    --screen-w: 100vw;
+  }
+
+  @media (max-width: 600px) {
+    --width-part: 1;
+  }
 }
 
 .carousel-list {
@@ -40,24 +55,38 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0.8;
 
   border: none;
 
   cursor: pointer;
   z-index: 2;
+
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+
+  font-weight: bold;
+  font-size: 1.5rem;
+  overflow: hidden;
+  user-select: none;
+}
+.carousel .button:focus {
+  border: none;
+  outline: none;
 }
 
 .to-left {
-  left: 0px;
+  left: 4px;
 }
 
 .to-right {
-  right: 0px;
+  right: 4px;
 }
 
 .indicators {
   padding: 8px;
-  background-color: grey;
+  background-color: rgb(250, 237, 255);
   display: flex;
   justify-content: center;
 }

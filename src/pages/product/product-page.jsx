@@ -54,15 +54,18 @@ const ProductCard = (props) => {
   };
 
   return (
-    <section>
+    <section className="product-card">
       <Carousel images={selectedColor?.images} />
 
-      <div>
+      <div className="info-select-area">
         <h3>{title}</h3>
 
-        <p>{selectedColor?.price} $</p>
-
         <form onSubmit={handleSubmit}>
+          <div className="to-cart-submit-area">
+            <h4>{selectedColor?.price} $</h4>
+            <button type="submit">Добавить в корзину</button>
+          </div>
+
           <label>
             Цвет: &nbsp;
             <select
@@ -81,13 +84,13 @@ const ProductCard = (props) => {
           </label>
 
           <SizeSelector accessSizes={selectedColor?.sizes} />
-
-          <button type="submit">Добавить в корзину</button>
         </form>
 
         <details>
           <summary>Описание</summary>
-          <p>{selectedColor?.description}</p>
+          <div>
+            <p>{selectedColor?.description}</p>
+          </div>
         </details>
       </div>
     </section>
