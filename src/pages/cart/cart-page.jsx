@@ -12,7 +12,7 @@ export function CartPage({ cartItems, cartListHandler }) {
   );
 
   return (
-    <section>
+    <section className="cart-container">
       {cartItems.length == 0 && <p>Товаров в корзине нет</p>}
 
       {cartItems.map(renderItems)}
@@ -27,17 +27,17 @@ const CartItem = React.memo(
     const handleClick = (action) => cartListHandler({ id: id, action: action });
 
     return (
-      <article>
+      <article className="cart-product-card">
         <Link to={`/product/${ids.productId}`}>
           <ItemContent ids={ids} />
         </Link>
-        <div>
-          <p>
-            Количество: {count}
+        <div className="cart-product-counter">
+          <div>
             <button onClick={() => handleClick(1)}>+</button>
+            {count}
             <button onClick={() => handleClick(-1)}>-</button>
-            <button onClick={() => handleClick(0)}>X</button>
-          </p>
+          </div>
+          <button onClick={() => handleClick(0)}>X</button>
         </div>
       </article>
     );
@@ -78,16 +78,16 @@ const ItemContent = React.memo((props) => {
   const { imgSrc, name, colorName, sizeName, price } = item;
 
   return (
-    <div className="card-content">
+    <div className="cart-product-content">
       <img src={basename + imgSrc}></img>
       <div>
         <h2>{name}</h2>
 
-        <p>{colorName}</p>
+        <p>
+          {colorName} / {sizeName}
+        </p>
 
-        <p>{sizeName}</p>
-
-        <p>{price} $</p>
+        <h3>{price} $</h3>
       </div>
     </div>
   );
